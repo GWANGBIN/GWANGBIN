@@ -50,7 +50,8 @@
     .description { 
       flex: 1;
       min-width: 0; /* Allows content to shrink below its minimum content size */
-      overflow: hidden; /* Prevents content from overflowing */
+      display: flex;
+      flex-direction: column;
     } 
     .publication-reference { 
       font-weight: bold; 
@@ -62,6 +63,7 @@
       word-wrap: break-word; 
       overflow-wrap: break-word;
       hyphens: auto;
+      width: 100%;
     }
     .title { 
       font-weight: bold; 
@@ -69,7 +71,7 @@
     .authors {
       font-style: italic;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       .publication-content {
         flex-direction: column;
       }
