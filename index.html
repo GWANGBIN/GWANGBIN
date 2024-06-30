@@ -42,22 +42,22 @@
     .publication-content { 
       display: flex;
       align-items: flex-start;
-    } 
+    }
     .img { 
-      flex: 0 0 150px; /* Adjust as needed */
+      flex: 0 0 150px; /* Adjust this width as needed */
       margin-right: 20px;
-    } 
+    }
     .description { 
       flex: 1;
-      min-width: 0; /* Allows content to shrink below its minimum content size */
-    } 
+      min-width: 0; /* This allows flex items to shrink below their minimum content size */
+    }
     .publication-reference { 
       font-weight: bold; 
-      margin-right: 10px; 
-    } 
+      margin-right: 5px;
+    }
     .title, .authors, .institution, .resources { 
       margin: 0 0 5px 0;
-      word-wrap: break-word; 
+      word-wrap: break-word;
       overflow-wrap: break-word;
       hyphens: auto;
     }
@@ -74,6 +74,7 @@
       .img {
         margin-right: 0;
         margin-bottom: 10px;
+        width: 100%;
       }
     }
   </style>
@@ -367,15 +368,10 @@ My research focuses on human-centered computing, aiming to enhance our sensory-m
               <img src="/papers/conference_paper_4.png" class="img-responsive" alt="">
             </div>
             <div class="description">
-              <p class="title">
-                <span class="publication-reference">[C4]</span>
-                WatchCap: Improving Scanning Efficiency in People with Low Vision through Compensatory Head Movement Stimulation
-              </p>
+              <p class="title"><span class="publication-reference">[C4]</span> WatchCap: Improving Scanning Efficiency in People with Low Vision through Compensatory Head Movement Stimulation</p>
               <p class="authors">Taewoo Jo, Dohyeon Yeo, <b>Gwangbin Kim</b>, Seokhyun Hwang, and SeungJun Kim</p>
-              <p class="institution"><b>ACM Ubicomp 2024</b>: Proceedings of the ACM on Immersive, Mobile, Wearable, and Ubiquitous Technologies<span style="font-weight:lighter"></span></p>
-              <p class="resources">
-                [<a href="https://dl.acm.org/doi/abs/10.1145/3659592">Paper</a>]
-              </p>
+              <p class="institution"><b>ACM Ubicomp 2024</b>: Proceedings of the ACM on Immersive, Mobile, Wearable, and Ubiquitous Technologies</p>
+              <p class="resources">[<a href="https://dl.acm.org/doi/abs/10.1145/3659592">Paper</a>]</p>
             </div> 
           </div>
         </li>
