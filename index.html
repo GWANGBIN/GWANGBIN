@@ -36,33 +36,44 @@
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
   <style>
-    .publication-entry { 
-      display: flex; 
-      margin-bottom: 20px; 
-    } 
-    .publication-content { 
-      display: flex; 
-      width: 100%; 
-    } 
-    .img { 
-      flex: 0 0 150px; /* Adjust as needed */
-      margin-right: 20px; 
-    } 
-    .description { 
-      flex: 1; 
-    } 
-    .publication-reference { 
-      font-weight: bold; 
-      margin-right: 10px; 
-    } 
-    .long-author-list { 
-      word-wrap: break-word; 
-      overflow-wrap: break-word; 
-    } 
-    .title { 
-      font-weight: bold; 
+  .publication-entry { 
+    display: flex; 
+    margin-bottom: 20px; 
+  } 
+  .publication-content { 
+    display: flex; 
+    width: 100%; 
+  } 
+  .img { 
+    flex: 0 0 150px; /* Adjust as needed */
+    margin-right: 20px; 
+  } 
+  .description { 
+    flex: 1; 
+    min-width: 0; /* This allows flex items to shrink below their minimum content size */
+  } 
+  .publication-reference { 
+    font-weight: bold; 
+    margin-right: 10px; 
+  } 
+  .long-author-list, .title, .authors { 
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    hyphens: auto; /* Allows words to be hyphenated when breaking */
+  } 
+  .title { 
+    font-weight: bold; 
+  }
+  @media (max-width: 768px) {
+    .publication-content {
+      flex-direction: column;
     }
-  </style>
+    .img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+</style>
   
 <script type="application/ld+json">
 {
