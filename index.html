@@ -36,44 +36,49 @@
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
   <style>
-  .publication-entry { 
-    display: flex; 
-    margin-bottom: 20px; 
-  } 
-  .publication-content { 
-    display: flex; 
-    width: 100%; 
-  } 
-  .img { 
-    flex: 0 0 150px; /* Adjust as needed */
-    margin-right: 20px; 
-  } 
-  .description { 
-    flex: 1; 
-    min-width: 0; /* This allows flex items to shrink below their minimum content size */
-  } 
-  .publication-reference { 
-    font-weight: bold; 
-    margin-right: 10px; 
-  } 
-  .long-author-list, .title, .authors { 
-    word-wrap: break-word; 
-    overflow-wrap: break-word;
-    hyphens: auto; /* Allows words to be hyphenated when breaking */
-  } 
-  .title { 
-    font-weight: bold; 
-  }
-  @media (max-width: 768px) {
-    .publication-content {
-      flex-direction: column;
+    .publication-entry { 
+      margin-bottom: 20px;
     }
-    .img {
-      margin-right: 0;
-      margin-bottom: 10px;
+    .publication-content { 
+      display: flex;
+      align-items: flex-start;
+    } 
+    .img { 
+      flex: 0 0 150px; /* Adjust as needed */
+      margin-right: 20px;
+    } 
+    .description { 
+      flex: 1;
+      min-width: 0; /* Allows content to shrink below its minimum content size */
+      overflow: hidden; /* Prevents content from overflowing */
+    } 
+    .publication-reference { 
+      font-weight: bold; 
+      margin-right: 10px; 
+      float: left;
+    } 
+    .title, .authors, .institution, .resources { 
+      margin: 0 0 5px 0;
+      word-wrap: break-word; 
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
-  }
-</style>
+    .title { 
+      font-weight: bold; 
+    }
+    .authors {
+      font-style: italic;
+    }
+    @media (max-width: 768px) {
+      .publication-content {
+        flex-direction: column;
+      }
+      .img {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
   
 <script type="application/ld+json">
 {
